@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route,Routes} from 'react-router-dom';
 import Header from "./components/Header";
 import Tasks from "./components/tasks";
 import Addtask from "./components/Addtask";
@@ -68,6 +68,7 @@ function App() {
     );
   };
   return (
+   
     <Router>
     <>
       <div className="container bg-zinc-800">
@@ -78,7 +79,8 @@ function App() {
         />
        
      { /*eslint-disable-next-line no-unused-vars*/}
-      <Route path='/' exact render={(props)=>(
+     <Routes>
+      <Route path='/'  element={
         <>
  {showAddTask && <Addtask onAdd={addtask} />}
         {tasks.length > 0 ? (
@@ -91,8 +93,9 @@ function App() {
           <h3>No Tasks To Show</h3>
         )}
         </>
-      )}/>
-      <Route path='/about' component={About}/>
+      }/>
+      <Route path='/about' element={<About/>}/>
+      </Routes>
         <Footer/>
       </div>
     </>
