@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import {BrowserRouter as Router, Route,Routes} from 'react-router-dom';
 import Header from "./components/Header";
-import Tasks from "./components/tasks";
+import Tasks from "./components/Tasks";
 import Addtask from "./components/Addtask";
-import Footer from "./components/footer";
-import About from "./components/about";
+import Footer from "./components/Footer";
+import About from "./components/About";
 
 function App() {
   const url = "http://localhost:5000/Tasks";
