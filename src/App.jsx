@@ -40,7 +40,7 @@ function App() {
   };
   //fetchtask
   const fetchTask = async (id) => {
-    const res = await fetch(`http://localhost:5000/Tasks/${id}`);
+    const res = await fetch(`https://tasketeer.netlify.app/Tasks/${id}`);
     const data = await res.json();
     return data;
   };
@@ -54,7 +54,7 @@ function App() {
   const toggleReminder = async (id) => {
     const taskTotoggle = await fetchTask(id);
     const updTask = { ...taskTotoggle, reminder: !taskTotoggle.reminder };
-    const res = await fetch(`http://localhost:5000/Tasks/${id}`, {
+    const res = await fetch(`https://tasketeer.netlify.app/Tasks/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updTask),
