@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 
 function App() {
-  const url = "http://localhost:5000/Tasks";
+  const url = "https://tasketeer.netlify.app/Tasks";
   const [showAddTask, setShowAddTask] = useState(true);
   const [tasks, setTasks] = useState([]);
   //add tasks
